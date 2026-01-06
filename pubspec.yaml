@@ -1,0 +1,39 @@
+name: project_focus
+description: Project Focus - A Material Design 3 based productivity app with custom timer
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # 상태 관리
+  flutter_riverpod: ^2.5.0
+  hooks_riverpod: ^2.5.0  # 애니메이션 컨트롤러 관리 용이 (flutter_hooks)
+
+  # UI 개선
+  google_fonts: ^6.1.0      # 폰트 (초기 개발용, 추후 로컬 에셋 전환 고려)
+  gap: ^3.0.0               # MD3의 간격 시스템을 편하게 구현
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.7
+  riverpod_generator: ^2.3.9
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/fonts/Pretendard-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Pretendard-Medium.otf
+          weight: 500
+
