@@ -20,22 +20,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Focus - ADHD 맞춤형 할 일 관리',
       debugShowCheckedModeBanner: false,
-      // Dynamic Color 적용 (시스템 테마 사용)
       theme: ThemeData(
         useMaterial3: true,
+        brightness: Brightness.light,
+        // 세련된 Off-White 배경
+        scaffoldBackgroundColor: const Color(0xFFF5F7FA),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4), // 기본 시드 컬러
-          brightness: Brightness.light,
+          seedColor: const Color(0xFF6200EE),
+          primary: const Color(0xFF6200EE),
+          secondary: const Color(0xFF03DAC6),
+          surface: Colors.white,
         ),
       ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4),
-          brightness: Brightness.dark,
-        ),
-      ),
-      themeMode: ThemeMode.system, // 시스템 테마 따라가기
+      themeMode: ThemeMode.light, // 프리미엄 룩을 위해 라이트 모드 고정 (선택 사항)
       home: const TodoListPage(),
     );
   }
