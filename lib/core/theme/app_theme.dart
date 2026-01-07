@@ -8,7 +8,7 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: 'Pretendard', // 앱 전역 폰트 적용
+      // fontFamily: 'Pretendard', // 폰트 파일 추가 후 주석 해제
       colorScheme: ColorScheme.fromSeed(
         seedColor: seedColor,
         brightness: Brightness.light,
